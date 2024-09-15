@@ -35,6 +35,7 @@
 - Nodejs程序运行日志可以通过面板网站的log中查看，也可以在SSH终端里查看，日志文件的完整路径为/home/你的用户名/domains/你的网站域名/logs/error.log
 
 ## 后续
+- SOCKS代理进程由Nodejs进程负责保活，10秒钟检查一次，因此后续只需要关注Nodejs进程的保活就可以了
 - Nodejs进程的保活，可以手动访问网站进行，也可以通过自动化方案监控网站进行，就不再赘述了
-- 自动化的我推荐[upptime](https://github.com/upptime/upptime)，不需要有服务器，只需要有Github账号就能够进行部署
+- 自动化网页监控项目推荐[upptime](https://github.com/upptime/upptime)，不需要有服务器，只需要有Github账号就能够进行部署
 - 完结撒花~~
