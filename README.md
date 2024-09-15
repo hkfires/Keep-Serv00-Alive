@@ -1,7 +1,9 @@
 ### Serv00服务器优雅的保活方案
-本项目是在CMLiussss大佬的[博客](https://blog.cmliussss.com/p/Serv00-Socks5/)基础上对保活进行的改进，在部署前，请确保已经按博客内容完成了Socks5的部署并使用正常<br>
-在Serv00上使用Cron进行进程保活的情况下，发现Cron计划任务经常被清掉，导致进程存活时间很短，因而才有了这篇文章，对进程保活进行改进<br>
-这个方案利用了Serv00自带Apache服务器的Phusion Passenger插件功能，每次访问网页时可以唤醒Nodejs程序，因而不需要借助Cron就能够进行保活，自然没有了被杀Cron计划任务的烦扰<br>
+本项目是在CMLiussss大佬的[博客](https://blog.cmliussss.com/p/Serv00-Socks5/)基础上对保活进行的改进，在部署前，请确保已经按博客内容完成了Socks5的部署并使用正常
+
+在Serv00上使用Cron进行进程保活的情况下，发现Cron计划任务经常被清掉，导致进程存活时间很短，因而才有了这篇文章，对进程保活进行改进
+
+这个方案利用了Serv00自带Apache服务器的Phusion Passenger插件功能，每次访问网页时可以唤醒Nodejs程序，因而不需要借助Cron就能够进行保活，自然没有了被杀Cron计划任务的烦扰
 
 ## 部署步骤
 1、登录Serv00面板，删除注册后自带的网站，点击Delete(purge website files)清空网站文件
@@ -28,6 +30,8 @@
 4、Nodejs程序运行日志可以通过面板网站的log中查看，也可以在SSH终端里查看，日志文件的完整路径为/home/你的用户名/domains/你的网站域名/logs/error.log
 
 ## 后续
-Nodejs进程的保活，可以手动访问网站进行，也可以通过自动化方案监控网站进行，就不再赘述了<br>
-自动化的我推荐[upptime](https://github.com/upptime/upptime)，不需要有服务器，只需要有Github账号就能够进行部署<br>
+Nodejs进程的保活，可以手动访问网站进行，也可以通过自动化方案监控网站进行，就不再赘述了
+
+自动化的我推荐[upptime](https://github.com/upptime/upptime)，不需要有服务器，只需要有Github账号就能够进行部署
+
 完结撒花~~
